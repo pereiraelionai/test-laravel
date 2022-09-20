@@ -9,12 +9,10 @@ class DataHoraController extends Controller
     public function dataHora(Request $request) {
         header("Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}");
 
-        $data = Date('d/m/Y');
-        $hora = Date('H:i:s');
+        $data_hora = Date('d/m/Y H:i:s');
 
         return response()->json([
-            'data' => $data,
-            'hora' => $hora
+            'data_hora' => $data_hora
         ]);
     }
 }
